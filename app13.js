@@ -140,11 +140,161 @@
 // console.log(electricCar);
 
 
-function foo(){
-    return [1,2,3];
+// function foo(){
+//     return [1,2,3];
 
-}
+// }
 
-let [a,b,c]= foo();
-console.log(a,b,c);
+// let [a,b,c]= foo();
+// console.log(a,b,c);
 
+// class Car {
+//     constructor(){
+//         console.log('car is being made.');
+//     }
+
+// speed(){
+//     console.log('car is in speed.');
+// }
+// }
+
+// var newCar = new Car();
+// newCar.speed()
+
+
+
+
+
+
+// class Car {
+//     constructor(color, make, modal){
+//        this.color = color;
+//        this.make = make;
+//        this.modal = modal;
+//     }
+//     hybrid = true;
+// speed(){
+//     console.log('car is in speed.');
+// }
+// }
+
+// var newCar = new Car('red', 'suzuki',2010);
+// console.log(newCar)
+
+
+
+
+
+
+// class Car {
+//     constructor(wheelsCount){
+//         this.wheel = wheelsCount
+       
+//     }
+// }
+
+// class Suzuki extends Car{
+// constructor(color, modal, wheelsCount){
+//     super(wheelsCount);
+//     this.color=color;
+//     this.make = 'suzuki';
+//     this.modal = modal;
+// }
+// }
+// class Cultus extends Suzuki{
+// constructor(manualtransmission){   
+//     super(manualtransmission);
+
+// }
+
+// var suzukiCar = new Car('red', 2010, 4);
+// console.log(suzukiCar)
+
+
+
+// function printSum(sumValue){
+//     console.log(sumValue);
+// }
+
+// function sum(num1, num2, cb){
+    
+//     var sum = num1 + num2;
+
+//     cb(sum);
+// }
+
+// sum(2,4, printSum);
+
+
+// function sum(num1, num2, cb){
+    
+//     var sum = num1 + num2;
+
+//     cb(sum);
+// }
+
+// sum(2, 4, function(sumValue){
+//     setTimeout(function(){
+//         console.log(sumValue)
+//     }, 3000);
+// });
+
+// var iftarParty = new Promise((resolve, reject) =>{
+//     var randomNumber = Math.ceil(Math.random()*2)
+//     setTimeout(() => {
+//         if(randomNumber ===1){
+//         resolve();
+//     }
+//     else{
+//         reject();
+//     }
+
+//     }, 3000)
+// });
+
+// iftarParty
+//     .then(() => {
+//         var username = prompt('what is your name');
+//         document.write(`Welcome ${username}`);
+//     }) 
+//     .catch(() =>{
+//         console.error('something went wrong');
+//     });
+
+
+    
+// var iftarParty = new Promise((resolve, reject) =>{
+//     var randomNumber = Math.ceil(Math.random()*2)
+   
+//         if(randomNumber ===1){
+//         resolve('welcome to promises');
+//     }
+//     else{
+//         reject('it was not number 1');
+//     }
+// })
+
+
+// iftarParty
+//     .then((msg) => {
+//         document.write(msg);
+//         return 'no error occurred'
+//    }) 
+//     .catch((err) =>{
+//         console.error(err);
+//         return 'some error occurred'
+//     })
+//     .then((promiseResponse) => {
+//         console.log(promiseResponse);
+//     })
+
+fetch('https://jsonplaceholder.typicode.com/todos/1')
+    .then((response) =>{
+        // console.log(response)
+        returnresponse.json()
+    })
+    .then((jsonData)=>{
+        console.log(jsonData);
+        document.write(`Stori title is ${jsonData.title}`);
+    }
+    )
