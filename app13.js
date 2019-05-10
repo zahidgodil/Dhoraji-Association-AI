@@ -288,13 +288,21 @@
 //         console.log(promiseResponse);
 //     })
 
-fetch('https://jsonplaceholder.typicode.com/todos/1')
-    .then((response) =>{
-        // console.log(response)
-        returnresponse.json()
-    })
-    .then((jsonData)=>{
-        console.log(jsonData);
-        document.write(`Stori title is ${jsonData.title}`);
-    }
-    )
+// fetch('https://jsonplaceholder.typicode.com/todos/1')
+//     .then((response) =>{
+//         // console.log(response)
+//         returnresponse.json()
+//     })
+//     .then((jsonData)=>{
+//         console.log(jsonData);
+//         document.write(`Stori title is ${jsonData.title}`);
+//     }
+//     )
+
+
+
+
+var iftarBazar = ['apple', 'banana', 'tarbooz', 'khajoor'];
+iftarBazar.map((fruit, index)=>{
+    console.log(fruit, index);
+})
